@@ -1,0 +1,10 @@
+version: '3.7'
+
+services:
+  docker-front:
+    image: ${REGISTRY_URL}/${APP_NAME}:${VERSION}
+    env_file:
+      - .env
+    build:
+      context: .
+      dockerfile: Dockerfile
